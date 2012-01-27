@@ -1,19 +1,32 @@
-.skillbar { background : #ccc; margin : 2px;}
+div.skillbar {
+	background: #ccc;
+	margin: 2px;
 
-.rotate {
-	/* Safari */
-	-webkit-transform: rotate(-90deg);
-	
-	/* Firefox */
-	-moz-transform: rotate(-90deg);
-	
-	/* IE */
-	-ms-transform: rotate(-90deg);
-	
-	/* Opera */
-	-o-transform: rotate(-90deg);
-	
-	/* Internet Explorer */
-	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dcdddd', endColorstr='#cbcccc'); /* for IE */
+	background: -webkit-gradient(linear, left top, right top, from(#dcdddd), to(#cbcccc));              /* for webkit browsers */
+	background: -moz-linear-gradient(left,  #dcdddd,  #cbcccc);                                         /* for firefox 3.6+ */ 
+}
+
+button.skillarrow {
+	font-size: 8px;
+	margin: 3px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+span.left {
+	position: absolute;
+	left: 0;
+}
+span.right {
+	position: absolute;
+	right: 0;
+}
+div.line {
+	position: relative;
+	text-align: center;
+	width: 100%;
 }
 

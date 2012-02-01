@@ -1,13 +1,36 @@
 
-var rightarrow='&#x25B6;';
-var downarrow='&#x25BC;';
+var rightarrow='\u25B6';
+var downarrow='\u25BC';
 
 $(document).ready(function() {
+  $(".skilldescription").hide();
+
 	$(".skillbar").each(function(index) {
-		$(this).html(' <button class="skillarrow">'+rightarrow+'</button> '+$(this).html());
+		$(this).prepend('<span class="skillarrow">'+rightarrow+'</span> ');
+
+    var arrow = $("#"+$(this).attr('id')+ " > .skillarrow");
+
+    $(this).hover(
+      function() { $(this).css('cursor', 'pointer'); },
+      function() { $(this).css('cursor', 'auto'); }
+      );
 
 		$(this).click(function() {
-			$(this).$("button").text('hi');
+
+
+      if(arrow.text().trim().charAt(0) == downarrow)
+      {
+        // Hide skill descriptions
+		  	arrow.html(rightarrow);
+        $(this).next().slideUp("fast");
+      }
+      else
+      {
+        // Show skill descriptions
+		  	arrow.html(downarrow);
+        $(this).next().slideDown("fast");
+      }
+
 		});
 
 	});

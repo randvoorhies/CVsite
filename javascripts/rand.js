@@ -1,6 +1,7 @@
 
 var rightarrow='\u25B6';
 var downarrow='\u25BC';
+var fancyright='\u27A0';
 
 $(document).ready(function() {
 
@@ -9,7 +10,19 @@ $(document).ready(function() {
   $("nav li a").each(function(index) {
     $(this).click(function()
       {
-        $('html,body').animate({scrollTop:$($(this).attr('href')).offset().top}, 'fast'); return false;
+        $('html,body').animate({scrollTop:$($(this).attr('href')).offset().top}, 300, 'linear'); 
+      })
+    });
+
+
+  //------------------------------ Make the section headings look a little fancier
+  $(".doc-heading").prepend('<a style="text-decoration:none;" href="index.html" title="Go to top" >'+fancyright+'</a> ');
+  $(".doc-heading a").each(function(index) {
+    $(this).click(function()
+      {
+        console.log('heyyy');
+        $('html,body').animate({scrollTop:$('#nav').offset().top}, 100, 'linear'); 
+        return false;
       })
     });
 

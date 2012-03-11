@@ -1,158 +1,92 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-<head>
+<html lang="en">
+  <head>
 
-	<!-- Basic Page Needs
-  ================================================== -->
-	<meta charset="utf-8">
-	<title>Randolph Voorhies</title>
-	<meta name="description" content="Randolph Voorhies' CV">
-	<meta name="author" content="Randolph Voorhies">
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+    <!--~~~~~~~~~~~~~~~~~~~~ Metadata ~~~~~~~~~~~~~~~~~~~~-->
+    <meta charset="utf-8">
+    <title>Randolph Voorhies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Randolph Voorhies' Personal Web Site">
+    <meta name="author" content="Randolph Voorhies">
 
-	<!-- Mobile Specific Metas
-  ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!-- CSS
-  ================================================== -->
-  <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="stylesheets/base.css">
-	<link rel="stylesheet" href="stylesheets/skeleton.css">
-	<link rel="stylesheet" href="stylesheets/layout.css">
-	<link rel="stylesheet" href="stylesheets/rand.css">
+    <!--~~~~~~~~~~~~~~~~~~~~ CSS Links ~~~~~~~~~~~~~~~~~~~~-->
+    <link href="css/all.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
 
-	<!-- JS
-	================================================== -->
-	<script type="text/javascript" src="javascripts/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript" src="javascripts/tabs.js"></script>
-	<script type="text/javascript" src="javascripts/rand.js"></script>
+  </head>
 
+  <body>
 
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Randolph Voorhies</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </div><!--/.navbar-inner -->
+    </div><!--/.navbar -->
 
-</head>
-<body>
+      <div class="container">
 
+        <!-- Masthead -->
+        <div class="row"> <div class="span12" id="masthead"></div> </div>
 
+        <!-- Social Strip -->
+        <div class="row">
+          <div class="span12" id="socialspan">
+            <div class="row"> 
+              <div class="span4 offset8" id="socialstrip">
+                <a href="http://github.com/randvoorhies"><img src="img/github.png" title="Github" class="socialicon"></a>
+                <a href="http://code.google.com/u/100406746138097279368/"><img src="img/google.png" title="Google Code" class="socialicon"></a>
+                <a href="http://www.linkedin.com/pub/randolph-voorhies/1/4b0/a72"><img src="img/linkedin.png" title="LinkedIn" class="socialicon"></a>
+                <a href="http://stackoverflow.com/users/237092/boatzart"><img src="img/stackoverflow.png" title="Stack Overflow" class="socialicon"></a>
+              </div><!--/#socialstrip -->
+            </div><!--/.row -->
+          </div><!--/#socialspan-->
+        </div><!--/.row-->
 
-	<!-- Primary Page Layout
-	================================================== -->
+        <!-- Hero Unit -->
+        <div class="row">
+          <div class="span8 offset2">
+            <div class="hero-unit">
+              lorum ipsum
+            </div><!--/.hero-unit-->
+          </div><!--/.span8-->
+        </div><!--/.row-->
 
-	<!-- Delete everything in this .container and get started on your own site! -->
+      </div><!--/.container-->
 
-	<div class="container">
-		<div class="sixteen columns">
-			<h1>Randolph Voorhies</h1>
-		</div>
-
-		<div class="three columns sidebar">
-		  <img src="images/rand.jpeg" class="scale-with-grid"/>
-			<nav id="nav">
-				<ul>
-					<li><a href="#about">        About Me     </a></li>
-					<li><a href="#skills">       Skills       </a></li>
-					<li><a href="#projects">     Projects     </a></li>
-					<li><a href="#publications"> Publications </a></li>
-					<li><a href="#contact">      Contact      </a></li>
-				</ul>
-        <a href="http://github.com/randvoorhies"><img src="images/github.png"/></a>
-        <a href="http://code.google.com/u/100406746138097279368/"><img src="images/google.png"/></a>
-        <a href="http://www.linkedin.com/pub/randolph-voorhies/1/4b0/a72"><img src="images/linkedin.png"/></a>
-        <a href="http://stackoverflow.com/users/237092/boatzart"><img src="images/stackoverflow.png"/></a>
-			</nav>
-		</div>
-
-		<div class="twelve columns offset-by-one content">
-
-			<hr class="large" />
-			<div class="doc-section" id="about">
-			<div class="doc-heading">About Rand</div>
-
-				<p>I am a PhD student in the <a href="http://cs.usc.edu">Computer Science Department</a>
-				at the <a href="http://usc.edu">University of Southern California</a>,
-				and a research assistant in Laurent Itti's <a
-				href="http://ilab.usc.edu">iLab</a></p> 
-
-				<h4>Research Interests</h4>
-
-					<p>I am interested in computer vision, specifically in investigating
-					how models of low-level visual processing in humans can be used to
-					enhance machine object recognition performance.</p>
-
-					<p>I am also interested in robotics, high-performance distributed
-					computation, and am an all around huge programming nerd. Check out
-					the <a href="#skills">skills</a>, <a href="#projects">projects</a>,
-					and <a href="#publications">publications</a> sections for more
-					info</p>
-
-			</div>
-
-			<hr class="large" />
-			<div class="doc-section" id="skills">
-				<div class="doc-heading">Skills</div>
-          <h4>Programming Languages </h4>
-
-					<div style="width:75%">
-						<div class="line">
-							<span class="left">| novice</span><span class="centre"> &nbsp; </span><span class="right">expert |</span>
-						</div>
-
-						<div class="skillbar" id="skillbar_cpp"    style="width:95%;"> C++ (11) </div>
-              <div class="skilldescription">
-                <ul>
-                  <li>Template Metaprogramming</li>
-                  <li>Image Processing (OpenCV)</li>
-                </ul>
-              </div>
-
-						<div class="skillbar" id="skillbar_python" style="width:55%;"> Python </div>
-            <div class="skilldescription">Skill Description Skill Description
-              Skill Description Skill Description Skill Description Skill
-              Description Skill Description </div>
-
-						<div class="skillbar" id="skillbar_matlab" style="width:50%;"> MATLAB </div>
-            <div class="skilldescription">Skill Description Skill Description
-              Skill Description Skill Description Skill Description Skill
-              Description Skill Description </div>
-
-						<div class="skillbar" id="skillbar_perl"   style="width:25%;"> Perl </div>
-            <div class="skilldescription">Skill Description Skill Description
-              Skill Description Skill Description Skill Description Skill
-              Description Skill Description </div>
-
-					</div>
-
-			</div>
-
-			<hr class="large" />
-			<div class="doc-section" id="projects">
-			<div class="doc-heading">Projects</div>
-			</div>
-
-			<hr class="large" />
-			<div class="doc-section" id="publications">
-			<div class="doc-heading">Publications</div>
-			</div>
-
-			<hr class="large" />
-			<div class="doc-section" id="contact">
-			<div class="doc-heading">Contact</div>
-			</div>
-
-		</div>
-
-	</div><!-- container -->
+    <!--~~~~~~~~~~~~~~~~~~~~ Javascript ~~~~~~~~~~~~~~~~~~~~-->
+    <script src="js/jquery.js"></script>
+    <script src="js/rand.js"></script>
+    <!-- <script src="js/bootstrap-transition.js"></script> -->
+    <!-- <script src="js/bootstrap-alert.js"></script> -->
+    <!-- <script src="js/bootstrap-modal.js"></script> -->
+    <!-- <script src="js/bootstrap-dropdown.js"></script> -->
+    <!-- <script src="js/bootstrap-scrollspy.js"></script> -->
+    <!-- <script src="js/bootstrap-tab.js"></script> -->
+    <!-- <script src="js/bootstrap-popover.js"></script> -->
+    <!-- <script src="js/bootstrap-button.js"></script> -->
+    <!-- <script src="js/bootstrap-collapse.js"></script> -->
+    <!-- <script src="js/bootstrap-carousel.js"></script> -->
+    <!-- <script src="js/bootstrap-typeahead.js"></script> -->
 
 
 
-<!-- End Document
-================================================== -->
-</body>
-</html>
+  </body>
+</html> 
+

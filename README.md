@@ -1,4 +1,4 @@
-This site is built using the Jinja2 templating system. The site's develoment environment is split up into the following directories:
+This site is built using the Jinja2 templating system and less. The site's develoment environment is split up into the following directories:
 
 *  __CVsite/less__ : The _less_ css template files.
 *  __CVsite/pages__: Jinja2 templates which get rendered directly into pages.

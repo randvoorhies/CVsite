@@ -2,20 +2,25 @@ html, body {
   background: @backgroundColor;
 }
 
+body { 
+  padding-top: 40px;  /* 40px to make the container go all the way to the bottom of the topbar */
+}
+
 #masthead {
-  background: @navbarBackground url("../img/masthead.jpg") center no-repeat;
-  height: 350px;
+  background: @navbarBackground url("../img/masthead.jpg") center bottom no-repeat;
+  height: 200px;
 }
 
 #socialspan {
-  #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
+  #gradient > .vertical(@navbarBackground, @navbarBackgroundHighlight);
 }
 
+@socialPadding: 5px;
 img.socialicon {
-  margin: 20px 0 20px 8px; 
+  margin: @socialPadding 0 @socialPadding @socialPadding; 
 }
 
-div.darkrow {
+.dark {
   background: @navbarBackground;
 }
 

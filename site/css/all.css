@@ -6771,10 +6771,6 @@ body {
   /* 40px to make the container go all the way to the bottom of the topbar */
 
 }
-#masthead {
-  background: #222222 url("../img/masthead.jpg") center bottom no-repeat;
-  height: 200px;
-}
 #socialspan {
   background-color: #292929;
   background-image: -moz-linear-gradient(top, #222222, #333333);
@@ -6797,7 +6793,4 @@ body {
 }
 img.socialicon {
   margin: 5px 0 5px 5px;
-}
-.dark {
-  background: #222222;
 }

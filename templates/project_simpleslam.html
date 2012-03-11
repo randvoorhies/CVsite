@@ -1,0 +1,13 @@
+{% extends 'project.html' %}
+{% block projectcontent %}
+<h1>Simple SLAM</h1>
+<p>
+
+  A bare-bones implementation of <a href="http://robots.stanford.edu/papers/montemerlo.fastslam-tr.html">FastSLAM 1.0</a>
+  written for MATLAB/Octave, written mostly for education. It simulates a robot cruising around a 2D environment, occasionally receiving range and bearing measurements to landmarks.  The task of the robot is to simultaneously build a map of the environment, and to localize itself within that map.
+
+</p>
+
+<img src="img/simpleslam.png"/>
+
+{% endblock %}

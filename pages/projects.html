@@ -1,0 +1,44 @@
+{% extends 'main.html' %}
+{% block content %}
+
+{% macro makeprojects(projects) %}
+<div class="container">
+  <div class="row">
+
+    <div class="span4">
+      <ul class="nav nav-list">
+        {% for project in projects %}
+        <li><a href="#{{project['html']|replace('.html','')}}">{{project['title']}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="span8">
+      {% for project in projects %}
+      <span id="{{project['html']|replace('.html','')}}">
+        {% include project['html'] %}
+      </span>
+      {% endfor %}
+    </div>
+{% endmacro %}
+
+  {{ makeprojects([
+    {
+     'title' : 'randolphvoorhies.com',
+     'html'  : 'project_randvoorhies.html'
+    },
+    {
+     'title' : 'Randterm',
+     'html'  : 'project_randterm.html'
+    },
+    {
+     'title' : 'SimpleSLAM',
+     'html'  : 'project_simpleslam.html'
+    }
+
+  ])}}
+
+  </div><!--/.row-->
+</div><!--/.container-->
+
+{% endblock %}

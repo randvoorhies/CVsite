@@ -27,6 +27,8 @@
 
   <body>
 
+    <script src="js/jquery.js"></script>
+
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -35,14 +37,42 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Randolph Voorhies</a>
+          <a class="brand" href="index.html">Randolph Voorhies</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+
+              {% macro navitem(_pagename, title) -%}
+                <li {% if pagename == _pagename %}class="active"{% endif %}>
+                <a href="{{_pagename}}">{{title}}</a>
+                </li>
+              {%- endmacro %}
+
+              {{ navitem('index.html', 'Home') }}
+              {{ navitem('projects.html', 'Projects') }}
+
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
+
+    {% block content %} {% endblock %}
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

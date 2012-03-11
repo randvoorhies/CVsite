@@ -43,10 +43,10 @@
 
               
 
-              <li class="active">
+              <li >
                 <a href="index.html">Home</a>
                 </li>
-              <li >
+              <li class="active">
                 <a href="projects.html">Projects</a>
                 </li>
 
@@ -57,54 +57,102 @@
     </div>
 
     
-    <div class="container">
 
-      <div class="row"> <!-- Main Row -->
 
-        <div class="span6">
-          <img src="img/rand.jpeg"/>
-        </div>
 
-        <div class="span6">
-          <div class="hero-unit">
-            <h2>About Me</h2>
-            <p>I am a PhD student in the <a href="http://cs.usc.edu">Computer Science Department</a>
-            at the <a href="http://usc.edu">University of Southern California</a>,
-            and a research assistant in Laurent Itti's <a
-              href="http://ilab.usc.edu">iLab</a></p> 
+  
+<div class="container">
+  <div class="row">
 
-            <br/>
+    <div class="span4">
+      <ul class="nav nav-list">
+        
+        <li><a href="#project_randvoorhies">randolphvoorhies.com</a></li>
+        
+        <li><a href="#project_randterm">Randterm</a></li>
+        
+        <li><a href="#project_simpleslam">SimpleSLAM</a></li>
+        
+      </ul>
+    </div>
 
-            <h3>Research Interests</h3>
-            <p>
-            I am interested in computer vision, specifically in investigating
-            how models of low-level visual processing in humans can be used to
-            enhance machine object recognition performance.
-            </p>
-            <p>
-            I am also interested in robotics, high-performance distributed
-            computation, and am an all around huge programming nerd.
-            </p>
+    <div class="span8">
+      
+      <span id="project_randvoorhies">
+        
+<div class="hero-unit projectwell">
 
-            <br/>
+<h1> randvoorhies.com</h1>
 
-            <h3>Personal Interests</h3>
-            <p>
-            When I'm not in the lab, you can usually find me running, spearfishing, or cooking.
-            </p>
+<p>I had a ton of fun writing this site because I used it as an excuse to learn
+as much as possible about modern web programming. Here's how the site works:</p>
 
-            <br/>
+<ul>
+  <li>
+    All pages were written using the <a href="http://jinja.pocoo.org/">Jinja2</a>
+    templating engine. All templates are rendered offline into pure html pages
+    prior to publishing using a custom python script.
+  </li>
+  <li>
+    The site scaffolding is based on <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>, which makes layout really easy.
+  </li>
+  <li>
+    Styles are handled using <a href="http://lesscss.org/">Less</a>, and are based off of Bootstrap's source.
+  </li>
+  <li>
+  A custom <a href="https://github.com/mynyml/watchr">Watchr</a> script monitors the Less and Jinja template folders for changes, and automatically rebuilds whatever is necessary.
+  </li>
 
-            <h3>Projects</h3>
-            <p>
-            I'm always building stuff! Check out my <a href="projects.html">projects page</a> to see what I've been up to.
-            </p>
-          </div><!--/.hero-unit-->
-        </div><!--/.span6-->
+</ul>
 
-      </div><!--/Main Row -->
 
-    </div> <!-- /container -->
+</div>
+
+      </span>
+      
+      <span id="project_randterm">
+        
+<div class="hero-unit projectwell">
+
+<h1> Randterm </h1>
+
+<p>
+Randterm is a simple python serial terminal inspired by the awesome (but Windows only) 
+<a href="http://realterm.sourceforge.net/">Realterm</a>. It was built mainly
+to help me debug serial protocols for microcontrollers, and so it includes the
+ability to send and display data in ascii, decimal, hex, or binary.  </p>
+
+<img src="img/randterm.png"/>
+
+</div>
+
+      </span>
+      
+      <span id="project_simpleslam">
+        
+<div class="hero-unit projectwell">
+
+<h1>Simple SLAM</h1>
+<p>
+
+  A bare-bones implementation of <a href="http://robots.stanford.edu/papers/montemerlo.fastslam-tr.html">FastSLAM 1.0</a>
+  written for MATLAB/Octave, written mostly for education. It simulates a robot cruising around a 2D environment, occasionally receiving range and bearing measurements to landmarks.  The task of the robot is to simultaneously build a map of the environment, and to localize itself within that map.
+
+</p>
+
+<img src="img/simpleslam.png"/>
+
+
+</div>
+
+      </span>
+      
+    </div>
+
+
+  </div><!--/.row-->
+</div><!--/.container-->
+
 
 
     <!-- Le javascript

@@ -1,6 +1,7 @@
 {% extends 'project.html' %}
-{% block projectcontent %}
-<h1> randvoorhies.com</h1>
+{% block title %}randvoorhies.com{% endblock %}
+{% block tagline %}My personal website.{% endblock %}
+{% block content %}
 
 <p>I had a ton of fun writing this site because I used it as an excuse to learn
 as much as possible about modern web programming. Here's how the site works:</p>
@@ -12,13 +13,17 @@ as much as possible about modern web programming. Here's how the site works:</p>
     prior to publishing using a custom python script.
   </li>
   <li>
-    The site scaffolding is based on <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>, which makes layout really easy.
+    The site scaffolding is based on <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>,
+    which makes layout really easy.
   </li>
   <li>
-    Styles are handled using <a href="http://lesscss.org/">Less</a>, and are based off of Bootstrap's source.
+    Styles are handled using <a href="http://lesscss.org/">Less</a>, and are
+    based off of Bootstrap's source.
   </li>
   <li>
-  A custom <a href="https://github.com/mynyml/watchr">Watchr</a> script monitors the Less and Jinja template folders for changes, and automatically rebuilds whatever is necessary.
+    A custom <a href="https://github.com/mynyml/watchr">Watchr</a> script
+    monitors the Less and Jinja template folders for changes, and automatically
+    rebuilds whatever is necessary.
   </li>
 
 </ul>

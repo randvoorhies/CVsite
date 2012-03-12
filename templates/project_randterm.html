@@ -1,12 +1,13 @@
 {% extends 'project.html' %}
-{% block projectcontent %}
-<h1> Randterm </h1>
+{% block title %}Randterm{% endblock %}
+{% block tagline %}A simple python serial terminal.{% endblock %}
+{% block content %}
 
-<p>
 Randterm is a simple python serial terminal inspired by the awesome (but Windows only) 
 <a href="http://realterm.sourceforge.net/">Realterm</a>. It was built mainly
 to help me debug serial protocols for microcontrollers, and so it includes the
-ability to send and display data in ascii, decimal, hex, or binary.  </p>
+ability to send and display data in ascii, decimal, hex, or binary.
 
-<img src="img/randterm.png"/>
+<p> <img src="img/randterm.png"/> </p>
+
 {% endblock %}

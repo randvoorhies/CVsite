@@ -1,21 +1,23 @@
 {% extends 'main.html' %}
 {% block content %}
 
+{% macro makeAnchor(project) %}{{project['html']|replace('.html','')}}{% endmacro %}
+
 {% macro makeprojects(projects) %}
 <div class="container">
   <div class="row">
 
-    <div class="span4">
+    <div class="span3">
       <ul class="nav nav-list">
         {% for project in projects %}
-        <li><a href="#{{project['html']|replace('.html','')}}">{{project['title']}}</a></li>
+        <li><a href="#{{makeAnchor(project)}}">{{project['title']}}</a></li>
         {% endfor %}
       </ul>
     </div>
 
-    <div class="span8">
+    <div class="span9">
       {% for project in projects %}
-      <span id="{{project['html']|replace('.html','')}}">
+      <span id="{{makeAnchor(project)}}">
         {% include project['html'] %}
       </span>
       {% endfor %}

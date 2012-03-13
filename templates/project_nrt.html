@@ -1,0 +1,43 @@
+{% extends 'project.html' %}
+{% block title %}Neuromorphic Robotics Toolkit{% endblock %}
+{% block tagline %}A modular programming framework for vision-based robotics.{% endblock %}
+
+{% block content %}
+
+<p>
+The Neuromorphic Robotics Toolkit was developed alongside <a href="http://ilab.usc.edu/itti">Dr. Laurent Itti</a>,
+and is a C++ framework for writing distributed, modular applications. The main
+focus of the project is on fine-grained modularity for computer vision
+applications, which requires a very high performance messaging system.
+</p>
+
+<p>The main features of the tookit are:</p>
+
+<ul>
+  <li>
+    Static module interface declarations, which leads to more predictable
+    (and understandable!) modules, and helps the compiler prevent you from making
+    many mistakes.
+  </li>
+  <li>
+    Modules are loaded into the same address space by default, allowing
+    extremely efficient communication. In most cases the only communication
+    overhead is a pointer copy.
+  </li>
+  <li>
+    Seamless integration into a multi-processing mode with optional message
+    serialization across Ethernet. This allows you to split up your application
+    between multiple address spaces for debugging, or across multiple machines
+    for distributed computing.
+  </li>
+  <li>
+    A full-featured, user friendly Image class and supporting processing library.
+  </li>
+</ul>
+
+<div class="checkitout">Check it out here: <a href="http://www.nrtkit.org">nrtkit.org</a></div>
+
+{% endblock %}
+
+{% block screenshot %}<img src="img/nrtscreenshot.png">{% endblock %}
+

@@ -1,0 +1,23 @@
+{% extends 'project.html' %}
+{% block title %}Beobot 2.0{% endblock %}
+{% block tagline %}A 16-core vision based robotics research platform.{% endblock %}
+{% block content %}
+
+<p>
+The Beobot 2.0 is a rolling mini cluster used in the iLab for visual navigation
+research. It's mechanical base is an electric wheelchair, which holds a custom
+CPU rack, water cooling system, and a host of sensors and cameras.
+</p>
+
+<p> The main work I did on this project was as follows: </p>
+<ul>
+  <li>Various schematics for the XTX carrier boards, and power boards.</li>
+  <li>Wrote the low-level communication library which allows various components of the robot to cooperate.</li>
+  <li>Wrote the initial microcontroller/cpu communication and control code.</li>
+</ul> 
+
+<div class="checkitout">Check it out here: <a href="http://ilab.usc.edu/wiki/index.php/Beobot_2.0">Beobot Wiki Page</a></div>
+
+{% endblock %}
+
+{% block screenshot %}<img src="img/beobot2.jpg">{% endblock %}

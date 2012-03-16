@@ -1,0 +1,53 @@
+{% extends 'project.html' %}
+{% block title %}NEMO{% endblock %}
+
+{% block tagline %}A tiny robotics board based on Gumstix and Arduino used for USC's CS445.{% endblock %}
+
+{% block content %}
+
+<p>
+  My first job as a graduate student at USC was TAing CS445 - Introduction to
+  Robotics. At the time, the class was based around a 2Mhz microcontroller
+  robotics board called the <a href="http://en.wikipedia.org/wiki/Handy_Board">Handy Board</a>.
+</p>
+
+<p>
+  After my first semester of teaching, it became obvious that the Handy Board was
+  just no longer cutting the mustard when it came to teaching modern robotics.
+  After much research, I determined that the best solution was to design my own
+  custom board that I could use for the class. The result was a great success,
+  and has since allowed us to upgrade the CS445 lab to teach such topics as image
+  processing, and probabilistic robotics. 
+</p>
+
+<p>Here are some quick specs on the board:</p>
+
+<ul>
+
+  <li>
+    Onboard 600Mhz Gumstix Overo with built-in WiFi for high-level processing.
+    This allows students to simply SSH into their robots during labs to upload
+    new code and monitor their robots' status.
+  </li>
+
+  <li>
+    Onboard Atmega 1280 for low-level processing. I preprogrammed this chip
+    with all of the functionality that the students would need, and provided
+    them with a simple API that run on the Gumstix. For example, a student
+    could simply call:
+    <ul>
+      <li><code>Nemo::setMotor(0, 100);</code> to set motor 0 to 100% power.</li>
+      <li><code>float distance = Nemo::getSonar(6);</code> to get the distance from a sonar connected to pin 6.</code></li>
+      <li><code>Image&lt;PixRGB&lt;byte&gt; &gt; img = Nemo::grabImage();</code> to grab an image from an attached USB webcam.</li>
+    </ul>
+  </li>
+
+  <li>
+    Dual-input, auto balancing power supply with a custom switching regulator providing up to 10A.
+  </li>
+
+</ul>
+
+{% endblock %}
+
+{% block screenshot %}<img src="img/nemo.jpg">{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'project.html' %}
+{% block title %}Neovision2{% endblock %}
+
+{% block tagline %}A DARPA funded project to develop an object recognition system based on neuroscience models.{% endblock %}
+
+{% block content %}
+
+<p>
+  The task of the Neovision2 project is to develop a state of the art object
+  recognition system based on current neuroscience research, and to prove that
+  such a biologically plausible system is superior to non biologically inspired
+  systems.
+</p>
+
+<p>
+The project is still ongoing, but here are my main contributions to date:
+</p>
+<ul>
+  <li>The system was built using <a href="#project_nrt">NRT</a>, so much of my work was fine-tuning the API in support of the other researchers.</li>
+  <li>Researched fast motion based segmentation algorithms.</li>
+  <li>Implemented a full keyframe-based annotation GUI in Qt to generate ground-truth for object recognition training.</li>
+  <li>Implemented Bayesian filters for tracking.</li>
+</ul>
+
+
+<div class="checkitout">Check it out here: <a href="http://www.darpa.mil/Our_Work/DSO/Programs/Neovision2.aspx">darpa.mil</a></div>
+
+{% endblock %}

@@ -1,7 +1,37 @@
 {% extends 'main.html' %}
 {% block content %}
 
+<script type="text/javascript">
+  $(document).ready(function () {
+
+      // Set up tooltips
+      $('.project-tag').tooltip({
+        placement : 'left',
+        delay     : { show: 0, hide: 100 }
+        });
+
+      // Show tooltips when hovering over link
+      $(".project-link").mouseover(function() {
+          $(this).parent().find('.project-tag').tooltip('show');
+        });
+
+      // Hide tooltips when not hovering over link
+      $(".project-link").mouseout(function() {
+          $(this).parent().find('.project-tag').tooltip('hide');
+        });
+
+      });
+</script>
+
 {% macro makeAnchor(project) %}{{project['html']|replace('.html','')}}{% endmacro %}
+
+{% macro makeTag(tag) %}
+  {% if tag == 'ilab' %}
+    <span class="project-tag project-ilab" rel="tooltip" title="ilab">&nbsp;</span>
+  {% elif tag == 'personal' %}
+    <span class="project-tag project-personal" rel="tooltip" title="personal">&nbsp;</span>
+  {% endif %}
+{% endmacro %}
 
 {% macro makeprojects(projects) %}
 <div class="container">
@@ -10,7 +40,12 @@
     <div class="span3">
       <ul class="nav nav-list">
         {% for project in projects %}
-        <li><a href="#{{makeAnchor(project)}}">{{project['title']}}</a></li>
+        <li>
+          <span>
+            {{ makeTag(project['tag']) }}
+            <a href="#{{makeAnchor(project)}}" class="project-link">{{project['title']}}</a>
+          </span>
+        </li>
         {% endfor %}
       </ul>
     </div>
@@ -27,23 +62,28 @@
   {{ makeprojects([
     {
      'title' : 'Neuromorphic Robotics Toolkit',
-     'html'  : 'project_nrt.html'
+     'html'  : 'project_nrt.html',
+     'tag'  : 'ilab'
     },
     {
      'title' : 'Beobot 2.0',
-     'html'  : 'project_beobot2.html'
+     'html'  : 'project_beobot2.html',
+     'tag'  : 'ilab'
     },
     {
      'title' : 'Randterm',
-     'html'  : 'project_randterm.html'
+     'html'  : 'project_randterm.html',
+     'tag'  : 'personal'
     },
     {
      'title' : 'SimpleSLAM',
-     'html'  : 'project_simpleslam.html'
+     'html'  : 'project_simpleslam.html',
+     'tag'  : 'personal'
     },
     {
      'title' : 'randolphvoorhies.com',
-     'html'  : 'project_randvoorhies.html'
+     'html'  : 'project_randvoorhies.html',
+     'tag'  : 'personal'
     },
   ])}}
 

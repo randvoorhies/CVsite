@@ -1,8 +1,9 @@
-html, body { 
+html { 
   background: @backgroundColor;
 }
 
 body { 
+  background: @backgroundColor;
   padding-top: 40px;  /* 40px to make the container go all the way to the bottom of the topbar */
 }
 
@@ -30,6 +31,7 @@ img.socialicon {
     font-size: 30px;
     line-height: 1;
     letter-spacing: -1px;
+    display:inline;
   }
   p {
     font-size: 14px;
@@ -61,3 +63,27 @@ img.socialicon {
     padding: 20px;
   }
 }
+
+.project-tag {
+  padding: 1px 9px 2px;
+  font-size: 8px;
+  font-weight: bold;
+  white-space: nowrap;
+  color: white;
+  background-color: #999;
+  .border-radius(3px);
+  width: 8px;
+}
+
+.project-color(@color) {
+  background-color: fade(@color, 50%);
+}
+
+.project-ilab {
+  .project-color(@blue);
+}
+
+.project-personal {
+  .project-color(@red);
+}
+

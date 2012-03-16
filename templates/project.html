@@ -1,9 +1,10 @@
 
 <div class="project">
-
   <h1>
     {% block title %} {% endblock %}
   </h1>
+
+  <span class="label project-{{project['tag']}}">{{ project['tag'] }}</span>
 
   <div class="tagline">
     {% block tagline %} {% endblock %}

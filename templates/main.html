@@ -47,9 +47,10 @@
                 </li>
               {%- endmacro %}
 
-              {{ navitem('index.html', 'Home') }}
+              {{ navitem('index.html',    'Home') }}
               {{ navitem('projects.html', 'Projects') }}
-              {{ navitem('contact.html', 'Contact') }}
+              {{ navitem('resume.html',   'Resume') }}
+              {{ navitem('contact.html',  'Contact') }}
 
             </ul>
           </div><!--/.nav-collapse -->
@@ -57,7 +58,9 @@
       </div>
     </div>
 
-    {% block content %} {% endblock %}
+    <div class="container">
+      {% block content %} {% endblock %}
+    </div>
 
     <!-- Le javascript
     ================================================== -->

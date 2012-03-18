@@ -34,34 +34,33 @@
 {% endmacro %}
 
 {% macro makeprojects(projects) %}
-<div class="container">
-  <div class="row">
 
-    <div class="span3">
-      <ul class="nav nav-list">
-        {% for project in projects %}
-        <li>
-          <span>
-            {{ makeTag(project['tag']) }}
-            <a href="#{{makeAnchor(project)}}" class="project-link">{{project['title']}}</a>
-          </span>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-
-    <div class="span9">
+  <div class="span3">
+    <ul class="nav nav-list">
       {% for project in projects %}
-      <span id="{{makeAnchor(project)}}">
-        {% include project['html'] %}
-      </span>
+      <li>
+        <span>
+          {{ makeTag(project['tag']) }}
+          <a href="#{{makeAnchor(project)}}" class="project-link">{{project['title']}}</a>
+        </span>
+      </li>
       {% endfor %}
-    </div>
+    </ul>
+  </div>
+
+  <div class="span9">
+    {% for project in projects %}
+    <span id="{{makeAnchor(project)}}">
+      {% include project['html'] %}
+    </span>
+    {% endfor %}
+  </div>
 {% endmacro %}
 
+<div class="row">
   {{ makeprojects([
     {
-     'title' : 'Neuromorphic Robotics Toolkit',
+     'title' : 'NRT',
      'html'  : 'project_nrt.html',
      'tag'  : 'ilab'
     },
@@ -76,7 +75,7 @@
      'tag'  : 'ilab'
     },
     {
-     'title' : 'Cognitive Technology Threat Warning System',
+     'title' : 'CT2WS',
      'html'  : 'project_ct2ws.html',
      'tag'  : 'ilab'
     },
@@ -101,8 +100,6 @@
      'tag'  : 'personal'
     },
   ])}}
-
-  </div><!--/.row-->
-</div><!--/.container-->
+</div><!--/.row-->
 
 {% endblock %}

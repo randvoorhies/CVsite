@@ -2,7 +2,7 @@ TARGETUSERNAME=rand
 TARGETHOST=199.15.117.8
 TARGETDIR=/var/www
 
-all: resume site
+all: site resume
 
 resume: site/resume.pdf
 site/resume.pdf : templates/resume_raw.html pages/printableresume.html

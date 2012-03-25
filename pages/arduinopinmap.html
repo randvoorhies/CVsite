@@ -1,13 +1,20 @@
 {% extends 'main.html' %}
 {% block content %}
 
+<script type="text/javascript">
+  $(document).ready(function () {
+      var addr='ude.csu@seihroov'
+      $('#emailaddr').html(addr.split("").reverse().join(""));
+  });
+</script>
+
 <div class="row">
   <div class="span8 offset2 foreground-well">
 
     <h1>ATmega1280 to Arduino Mega Pinmap</h1>
 
     <p>
-    
+
     I really love using the ATmega chips for small projects, because the
     available Arduino libraries make programming a snap. Unfortunately, when
     using just the raw chips it can be a bit of a pain to keep referring to the
@@ -18,9 +25,9 @@
 
     <table class="table table-striped">
       <colgroup>
-        <col>
-        <col>
-        <col>
+        <col width="30%" />
+        <col width="22%" />
+        <col width="48%" />
       </colgroup>
       <thead valign="bottom">
         <tr><th class="head">Atmega 1280 Pin</th>
@@ -122,7 +129,7 @@
           <td>&ndash;</td>
         </tr>
         <tr><td>PC7</td>
-          <td>Digital30</td>
+          <td>Digital 30</td>
           <td>&ndash;</td>
         </tr>
         <tr><td>PD0</td>
@@ -190,36 +197,36 @@
           <td>&ndash;</td>
         </tr>
         <tr><td>PF0</td>
-          <td>ADC 0  ADC</td>
-          <td>&ndash;</td>
+          <td>ADC 0</td>
+          <td>ADC</td>
         </tr>
         <tr><td>PF1</td>
-          <td>ADC 1  ADC</td>
-          <td>&ndash;</td>
+          <td>ADC 1</td>
+          <td>ADC</td>
         </tr>
         <tr><td>PF2</td>
-          <td>ADC 2  ADC</td>
-          <td>&ndash;</td>
+          <td>ADC 2</td>
+          <td>ADC</td>
         </tr>
         <tr><td>PF3</td>
-          <td>ADC 3  ADC</td>
-          <td>&ndash;</td>
+          <td>ADC 3</td>
+          <td>ADC</td>
         </tr>
         <tr><td>PF4</td>
-          <td>ADC 4  ADC</td>
-          <td>&ndash;</td>
+          <td>ADC 4</td>
+          <td>ADC</td>
         </tr>
         <tr><td>PF5</td>
-          <td>ADC 5  ADC</td>
-          <td>&ndash;</td>
+          <td>ADC 5</td>
+          <td>ADC</td>
         </tr>
         <tr><td>PF6</td>
-          <td>ADC 6  ADC</td>
-          <td>&ndash;</td>
+          <td>ADC 6</td>
+          <td>ADC</td>
         </tr>
         <tr><td>PF7</td>
-          <td>ADC 7  ADC</td>
-          <td>&ndash;</td>
+          <td>ADC 7</td>
+          <td>ADC</td>
         </tr>
         <tr><td>PG0</td>
           <td>Digital 41</td>
@@ -382,6 +389,7 @@
           <td>&ndash;</td>
         </tr>
       </tbody>
+
     </table>
 
 

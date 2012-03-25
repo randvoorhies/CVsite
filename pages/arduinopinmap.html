@@ -1,0 +1,395 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<div class="row">
+  <div class="span8 offset2 foreground-well">
+
+    <h1>ATmega1280 to Arduino Mega Pinmap</h1>
+
+    <p>
+    
+    I really love using the ATmega chips for small projects, because the
+    available Arduino libraries make programming a snap. Unfortunately, when
+    using just the raw chips it can be a bit of a pain to keep referring to the
+    Arduino schematics to figure out which ATmega physical pins map to which
+    Arduino logical pins. Here is a handy table to help you out:
+
+    </p>
+
+    <table class="table table-striped">
+      <colgroup>
+        <col>
+        <col>
+        <col>
+      </colgroup>
+      <thead valign="bottom">
+        <tr><th class="head">Atmega 1280 Pin</th>
+          <th class="head">Arduino Pin</th>
+          <th class="head">Arduino Special Function</th>
+        </tr>
+      </thead>
+      <tbody valign="top">
+        <tr><td>PA0</td>
+          <td>Digital 22</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PA1</td>
+          <td>Digital 23</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PA2</td>
+          <td>Digital 24</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PA3</td>
+          <td>Digital 25</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PA4</td>
+          <td>Digital 26</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PA5</td>
+          <td>Digital 27</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PA6</td>
+          <td>Digital 28</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PA7</td>
+          <td>Digital 29</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PB0</td>
+          <td>Digital 53</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PB1</td>
+          <td>Digital 52</td>
+          <td>ICSP SCK</td>
+        </tr>
+        <tr><td>PB2</td>
+          <td>Digital 51</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PB3</td>
+          <td>Digital 50</td>
+          <td>ICSP MISO</td>
+        </tr>
+        <tr><td>PB4</td>
+          <td>Digital 10</td>
+          <td>PWM</td>
+        </tr>
+        <tr><td>PB5</td>
+          <td>Digital 11</td>
+          <td>PWM</td>
+        </tr>
+        <tr><td>PB6</td>
+          <td>Digital 12</td>
+          <td>PWM</td>
+        </tr>
+        <tr><td>PB7</td>
+          <td>Digital 13</td>
+          <td>PWM</td>
+        </tr>
+        <tr><td>PC0</td>
+          <td>Digital 37</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PC1</td>
+          <td>Digital 36</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PC2</td>
+          <td>Digital 35</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PC3</td>
+          <td>Digital 34</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PC4</td>
+          <td>Digital 33</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PC5</td>
+          <td>Digital 32</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PC6</td>
+          <td>Digital 31</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PC7</td>
+          <td>Digital30</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PD0</td>
+          <td>Digital 21</td>
+          <td>SCL</td>
+        </tr>
+        <tr><td>PD1</td>
+          <td>Digital 20</td>
+          <td>SDA</td>
+        </tr>
+        <tr><td>PD2</td>
+          <td>Digital 19</td>
+          <td>RXD1</td>
+        </tr>
+        <tr><td>PD3</td>
+          <td>Digital 18</td>
+          <td>TXD1</td>
+        </tr>
+        <tr><td>PD4</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PD5</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PD6</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PD7</td>
+          <td>Digital 38</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PE0</td>
+          <td>Digital 0</td>
+          <td>RX0, PWM</td>
+        </tr>
+        <tr><td>PE1</td>
+          <td>Digital 1</td>
+          <td>TX0, PWM</td>
+        </tr>
+        <tr><td>PE2</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PE3</td>
+          <td>Digital 5</td>
+          <td>PWM</td>
+        </tr>
+        <tr><td>PE4</td>
+          <td>Digital 2</td>
+          <td>PWM</td>
+        </tr>
+        <tr><td>PE5</td>
+          <td>Digital 3</td>
+          <td>PWM</td>
+        </tr>
+        <tr><td>PE6</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PE7</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PF0</td>
+          <td>ADC 0  ADC</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PF1</td>
+          <td>ADC 1  ADC</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PF2</td>
+          <td>ADC 2  ADC</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PF3</td>
+          <td>ADC 3  ADC</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PF4</td>
+          <td>ADC 4  ADC</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PF5</td>
+          <td>ADC 5  ADC</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PF6</td>
+          <td>ADC 6  ADC</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PF7</td>
+          <td>ADC 7  ADC</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PG0</td>
+          <td>Digital 41</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PG1</td>
+          <td>Digital 40</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PG2</td>
+          <td>Digital 39</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PG3</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PG4</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PG5</td>
+          <td>Digital 4</td>
+          <td>PWM</td>
+        </tr>
+        <tr><td>PG6</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PG7</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PH0</td>
+          <td>Digital 17</td>
+          <td>RXD2</td>
+        </tr>
+        <tr><td>PH1</td>
+          <td>Digital 16</td>
+          <td>TXD2</td>
+        </tr>
+        <tr><td>PH2</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PH3</td>
+          <td>Digital 6</td>
+          <td>PWM</td>
+        </tr>
+        <tr><td>PH4</td>
+          <td>Digital 7</td>
+          <td>PWM</td>
+        </tr>
+        <tr><td>PH5</td>
+          <td>Digital 8</td>
+          <td>PWM</td>
+        </tr>
+        <tr><td>PH6</td>
+          <td>Digital 9</td>
+          <td>PWM</td>
+        </tr>
+        <tr><td>PH7</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PJ0</td>
+          <td>Digital 15</td>
+          <td>RXD3</td>
+        </tr>
+        <tr><td>PJ1</td>
+          <td>Digital 14</td>
+          <td>TXD3</td>
+        </tr>
+        <tr><td>PJ2</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PJ3</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PJ4</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PJ5</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PJ6</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PJ7</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PK0</td>
+          <td>ADC 8</td>
+          <td>ADC</td>
+        </tr>
+        <tr><td>PK1</td>
+          <td>ADC 9</td>
+          <td>ADC</td>
+        </tr>
+        <tr><td>PK2</td>
+          <td>ADC 10</td>
+          <td>ADC</td>
+        </tr>
+        <tr><td>PK3</td>
+          <td>ADC 11</td>
+          <td>ADC</td>
+        </tr>
+        <tr><td>PK4</td>
+          <td>ADC 12</td>
+          <td>ADC</td>
+        </tr>
+        <tr><td>PK5</td>
+          <td>ADC 13</td>
+          <td>ADC</td>
+        </tr>
+        <tr><td>PK6</td>
+          <td>ADC 14</td>
+          <td>ADC</td>
+        </tr>
+        <tr><td>PK7</td>
+          <td>ADC 15</td>
+          <td>ADC</td>
+        </tr>
+        <tr><td>PL0</td>
+          <td>Digital 49</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PL1</td>
+          <td>Digital 48</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PL2</td>
+          <td>Digital 47</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PL3</td>
+          <td>Digital 46</td>
+          <td>PWM</td>
+        </tr>
+        <tr><td>PL4</td>
+          <td>Digital 45</td>
+          <td>PWM</td>
+        </tr>
+        <tr><td>PL5</td>
+          <td>Digital 44</td>
+          <td>PWM</td>
+        </tr>
+        <tr><td>PL6</td>
+          <td>Digital 43</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr><td>PL7</td>
+          <td>Digital 42</td>
+          <td>&ndash;</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}
+
+

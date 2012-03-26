@@ -1,0 +1,164 @@
+{% macro educationEntry(edu) %}
+  <div class="row">
+    <div class="span5 degree"><h4>{{edu['degree'][0]}}</h4></div>
+    <div class="span3 duration">{{edu['degree'][1]}}</div>
+  </div>
+  <div class="row"> <div class="span3">{{edu['school']}}</div> </div>
+  <div class="row"> <div class="span3">GPA: {{edu['gpa']}}</div> </div>
+  <br/>
+{% endmacro %}
+
+{% macro experienceEntry(exp) %}
+  <div class="row">
+    <div class="span5"><h4>{{exp['where']}}</h4></div>
+    <div class="span3"><em>{{exp['when']}}</em></div>
+  </div>
+  <div class="row"> <div class="span5">{{exp['what']}}</div> </div>
+  <div class="row">
+    <div class="span8">
+      <ul>
+        {% for point in exp['points'] %}
+          <li>{{point}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro publicationEntry(pub) %}
+  <div class="row"> <div class="span7"><h4>{{pub['title']}}</h4></div> </div>
+  <div class="row"> <div class="span7">{{pub['authors']}}</div> </div>
+  <div class="row"> <div class="span7">{{pub['journal']}} {{pub['date']}}</div> </div>
+  {% if for_web %}
+  <div class="row"> <div class="span7"><a href="papers/{{pub['pdf']}}">[PDF]</a></div> </div>
+  {% endif %}
+  <br/>
+{% endmacro %}
+
+{% macro skillList(sl) %}
+        <div class="span5">
+          <h4>{{sl['title']}}</h4>
+          <p> {{ sl['skills'] | join(' &middot; ') }} </p>
+        </div>
+{% endmacro %}
+
+    <div class="resume">
+
+      <div class="row">
+        <div class="span8 myname"> Randolph C. Voorhies </div>
+      </div>
+
+      <br>
+      <blockquote>www.randolphvoorhies.com<br>
+        703 1/2 East Edgeware Road. Los Angeles, Ca. 90026<br>
+        voorhies@usc.edu<br>
+      </blockquote>
+
+      <br>
+
+      <h1>Education</h1>
+      {{ educationEntry({"degree" : ["Ph.D. in Computer Science", "In Progress"],
+                         "school" : "University of Southern California",
+                         "gpa"    : "3.930"}) }}
+
+      {{ educationEntry({"degree" : ["M.S. in Computer Science - Intelligent Robotics", "August 2009"],
+                         "school" : "University of Southern California",
+                         "gpa"    : "3.910"}) }}
+
+      {{ educationEntry({"degree" : ["B.S. in Computer Engineering &amp; Computer Science", "December 2006"],
+                         "school" : "University of Southern California",
+                         "gpa"    : "3.497"}) }}
+
+      <h1>Technical Skills</h1>
+
+      <div class="row">
+        {{ skillList({"title" : "Programming Languages",
+                      "skills" : ["C++ (11)", "C", "Python", "MATLAB", "Javascript", "Perl", "Spin"]}) }}
+
+        {{ skillList({"title" : "Software Libraries",
+                      "skills" : ["Boost", "ZeroC Ice", "Eigen", "OpenCV", "ROS", "Qt", "Thrust", "Arduino"]}) }}
+      </div>
+
+      <div class="row">
+        {{ skillList({"title" : "Electrical Engineering Tools",
+                      "skills" : ["Altium Designer", "Cadsoft Eagle", "Surface Mount Assembly"]}) }}
+
+        {{ skillList({"title" : "Engineering Abilities",
+                      "skills" : ["Image Processing", "Robotics Perception &amp; Localization",
+                                  "Distributed Programming", "Circuit Board Design"]}) }}
+      </div>
+
+      <br>
+
+      <h1>Experience</h1>
+
+      {{ experienceEntry({"where"  : "USC Computer Science Department",
+                          "when"   : "Fall 2007 - Present",
+                          "what"   : "Graduate Research Assistant in Laurent Itti's iLab",
+                          "points" : 
+                            [
+                              "Currently researching biologically inspired methods for monocular figure/ground segmentation.",
+                              "Implemented NRT, C++ a modular programming framework for image processing and robotics.",
+                              "Implemented tracking and object recognition systems for DARPA's Neovision2 project.",
+                              "Implemented a distributed attention system for DARPA's Cognitive Technologies Threat Warning System (CT2WS) project.",
+                              "Performed circuit design, assembly, and embedded programming for Beobot2.0, iLab's next generation 16-core robot."
+                            ]
+                            })}} 
+
+       {{ experienceEntry({"where"  : "South Pasadena Educational Foundation",
+                           "when"   : "Fall 2007 - Present",
+                           "what"   : "Teacher Trainer",
+                           "points" : 
+                             [
+                               "Designed a robotics curriculum to be taught to middle school students.",
+                               "Provided weekly training sessions for teachers."
+                             ]
+                             })}}
+
+       {{ experienceEntry({"where"  : "USC Computer Science Department",
+                           "when"   : "Fall 2007 - 2009",
+                           "what"   : "CS445 Introduction to Robotics Lab Assistant",
+                           "points" : 
+                             [
+                               "Designed and taught curricula for weekly three-hour lab sessions.",
+                               "Designed and built a custom robotics controller board based on a 600Mhz Overo processor.",
+                               "Built a software architecture and library to help the students cross-compile and upload code, "
+                               "as well as libraries for motion control, data acquisition, image processing, and communication."
+
+                             ]
+                             })}}
+
+       {{ experienceEntry({"where"  : "Microsoft",
+                           "when"   : "Summer 2004",
+                           "what"   : "Intern in the Security Division",
+                           "points" : 
+                             [
+                               "Developed security database migration tools in C#.",
+                             ]
+                             })}}
+
+       <h1>Publications</h1>
+
+       {{ publicationEntry({"authors" : "R.C. Voorhies, C. Siagian, L. Elazary, L. Itti",
+                            "title"   : "Centralized Server Environment for Educational Robotics",
+                            "journal" : "Proc. IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+                            "date"    : "2009",
+                            "pdf"     : "2009IROS_RandolphVoorhies.pdf"}) }}
+
+       {{ publicationEntry({"authors" : "R.C. Voorhies, L. Elazary, L. Itti",
+                            "title"   : "Application of a Bottom-Up Visual Surprise Model for Event Detection in Dynamic Natural Scenes",
+                            "journal" : "Vision Science Society Annual Meeting (VSS)",
+                            "date"    : "2010",
+                            "pdf"     : "2010VSS_RandolphVoorhies.pdf"}) }}
+
+       {{ publicationEntry({"authors" : "C. Siagian, C. Chang, R.C. Voorhies, L. Itti",
+                            "title"   : "Beobot 2.0: Cluster Architecture for Mobile Robotics",
+                            "journal" : "Journal of Field Robotics (JFR)",
+                            "date"    : "2010",
+                            "pdf"     : "2010_JFR_SiagianEtAl.pdf"}) }}
+
+      <h1>Honors</h1>
+      <p>Member Phi Kappa Phi</p>
+      <p>Co-Chair of the "Education Robotics" session for IROS 2009</p>
+
+    </div>

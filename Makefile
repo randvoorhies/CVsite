@@ -2,11 +2,19 @@ TARGETUSERNAME=rand
 TARGETHOST=199.15.117.8
 TARGETDIR=/var/www
 
-all: site resume
+.PHONY: all css cv site deploy
 
-resume: site/resume.pdf
-site/resume.pdf : templates/resume_raw.html pages/printableresume.html
-	@wkhtmltopdf site/printableresume.html site/resume.pdf --zoom .8
+all: site cv css
+
+css: site/css/all.css
+	
+cv: site/cv.pdf
+
+site/css/all.css: less/*.less
+	cd less && lessc all.less > ../site/css/all.css
+
+site/cv.pdf : templates/cv_raw.html pages/printablecv.html
+	@wkhtmltopdf site/printablecv.html site/RandolphVoorhiesCV.pdf --zoom .8
 
 site: templates/*.html pages/*.html
 	@python util/jinjarender.py

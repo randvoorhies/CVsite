@@ -30,7 +30,9 @@
   <div class="row"> <div class="span7">{{pub['authors']}}</div> </div>
   <div class="row"> <div class="span7">{{pub['journal']}} {{pub['date']}}</div> </div>
   {% if for_web %}
-  <div class="row"> <div class="span7"><a href="papers/{{pub['pdf']}}">[PDF]</a></div> </div>
+    {% if pub.has_key('pdf') %}
+    <div class="row"> <div class="span7"><a href="papers/{{pub['pdf']}}">[PDF]</a></div> </div>
+    {% endif %}
   {% endif %}
   <br/>
 {% endmacro %}
@@ -134,6 +136,11 @@
                              })}}
 
        <h1>Publications</h1>
+
+       {{ publicationEntry({"authors" : "R.C. Voorhies, L. Elazary, L. Itti",
+                            "title"   : "Neuromorphic Bayesian Surprise for Far-Range Event Detection",
+                            "journal" : "Proc. IEEE International Conference on Advanced Video and Signal Surveillance (AVSS)",
+                            "date"    : "2012"}) }}
 
        {{ publicationEntry({"authors" : "R.C. Voorhies, C. Siagian, L. Elazary, L. Itti",
                             "title"   : "Centralized Server Environment for Educational Robotics",

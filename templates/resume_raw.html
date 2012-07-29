@@ -48,23 +48,17 @@
       </div>
       -->
 
-      <br>
-
       <h1>Education</h1>
       {{ educationEntry({"degree" : ["Ph.D. in Computer Science", "In Progress"],
                          "school" : "University of Southern California",
                          "gpa"    : "3.930"}) }}
-      <br>
       {{ educationEntry({"degree" : ["M.S. in Computer Science - Intelligent Robotics", "August 2009"],
                          "school" : "University of Southern California",
                          "gpa"    : "3.910"}) }}
-      <br>
       {{ educationEntry({"degree" : ["B.S. in Computer Engineering &amp; Computer Science", "December 2006"],
                          "school" : "University of Southern California",
                          "gpa"    : "3.497"}) }}
 
-
-      <br>
 
       <h1>Technical Skills</h1>
 
@@ -91,10 +85,19 @@
         </div>
       </div>
 
-      <br>
-
       <h1>Experience</h1>
 
+      {{ experienceEntry({"where"  : "NASA / Jet Propulsion Laboratory",
+                          "when"   : "Summer 2012",
+                          "what"   : "Intern in the Computer Vision for Surface Applications Group",
+                          "points" : 
+                            [
+                              "Performed work on a visual odometry and stabilization system for automomous quadrotors, including image preprocessing, debugging and tuning.",
+                              "Ported a rapidly-exploring-random-tree implementation to run in real-time on the quadrotors.",
+                              "Implemented a simulation library for quadrotor controls and dynamics.",
+                              "Implemented a fast state estimation and data fusion filter."
+                            ]
+                            })}} 
       {{ experienceEntry({"where"  : "USC Computer Science Department",
                           "when"   : "Fall 2007 - Present",
                           "what"   : "Graduate Research Assistant in Laurent Itti's iLab",
@@ -106,7 +109,6 @@
                               "Performed circuit design, assembly, and embedded programming for Beobot2.0, iLab's next generation 16-core robot."
                             ]
                             })}} 
-       <br>
        {{ experienceEntry({"where" : "South Pasadena Educational Foundation",
                           "when"   : "Fall 2007 - Present",
                           "what"   : "Teacher Trainer",
@@ -116,7 +118,6 @@
                               "Provided weekly training sessions for teachers."
                             ]
                             })}}
-       <br>
        {{ experienceEntry({"where" : "USC Computer Science Department",
                           "when"   : "Fall 2007 - 2009",
                           "what"   : "CS445 Introduction to Robotics Lab Assistant",
@@ -129,7 +130,6 @@
 
                             ]
                             })}}
-       <br>
        {{ experienceEntry({"where" : "Microsoft",
                           "when"   : "Summer 2004",
                           "what"   : "Intern in the Security Division",

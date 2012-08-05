@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<div class="row">
+  <div class="span12">
+    <a class="btn" href="RandolphVoorhiesCV.pdf"><i class="icon-download"></i> Download</a>
+  </div>
+</div>
+<br>
+
+<div class="row">
+  <div class="span12 foreground-well">
+    {% set for_web = true %}
+    {% include "cv_raw.html" %}
+  </div>
+</div> <!--/.row-->
+
+{% endblock %}

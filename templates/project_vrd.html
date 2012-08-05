@@ -1,0 +1,22 @@
+{% extends 'project.html' %}
+{% block title %}Variance Ridge Detector{% endblock %}
+
+{% block tagline %}A highly optimized edge detector written in C with SSE intrinsics.{% endblock %}
+
+{% block content %}
+
+<p>
+
+  I advised <a href="http://sagarpandya.com/">Sagar Pandya</a> on his
+  semester-long directed research project to implement a fast SSE optimized
+  edge detector in C. The code has an easy to use plain C interface, compiles
+  to a .mex file for interfacing with MATLAB, and has an interface to
+  <a href="#project_nrt">NRT</a>.
+
+</p>
+
+<div class="checkitout">Check it out here: <a href="https://github.com/sagargp/vrd_sse">Github Repository</a></div>
+
+{% endblock %}
+{% block screenshot %}<img src="img/birdedge.jpg">{% endblock %}
+

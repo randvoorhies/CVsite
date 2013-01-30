@@ -18,7 +18,7 @@
     <div class="span8">
       <ul>
         {% for point in exp['points'] %}
-          <li>{{point}}</li>
+        <li>{{point}}</li>
         {% endfor %}
       </ul>
     </div>
@@ -27,14 +27,16 @@
 
 {% macro publicationEntry(pub) %}
   <div class="row"> <div class="span7"><h4>{{pub['title']}}</h4></div> </div>
+  {% if 'awards' in pub %} <div class="row"> <div class="span3"><em><b>({{pub['awards']}})</b></em></div> </div> {% endif %}
   <div class="row"> <div class="span7">{{pub['authors']}}</div> </div>
   <div class="row"> <div class="span7">{{pub['journal']}} {{pub['date']}}</div> </div>
-  {% if 'awards' in pub %}
-  <div class="row"> <div class="span7"><i>{{pub['awards']}}</i></div> </div>
-  {% endif %}
   {% if for_web %}
     {% if pub.has_key('pdf') %}
-    <div class="row"> <div class="span7"><a href="papers/{{pub['pdf']}}">[PDF]</a></div> </div>
+    <div class="row">
+      <div class="span7">
+        <a href="papers/{{pub['pdf']}}"><i class="icon-download-alt"></i> [PDF]</a>
+      </div> 
+    </div>
     {% endif %}
   {% endif %}
   <br/>
@@ -87,8 +89,8 @@
                       "skills" : ["Altium Designer", "Cadsoft Eagle", "Surface Mount Assembly"]}) }}
 
         {{ skillList({"title" : "Engineering Abilities",
-                      "skills" : ["Image Processing", "Robotics Perception &amp; Localization",
-                                  "Distributed Programming", "Circuit Board Design"]}) }}
+                      "skills" : ["Image Processing", "Robotic Perception &amp; Localization",
+                                  "Distributed Systems", "Circuit Board Design"]}) }}
       </div>
 
       <h1>Experience</h1>
@@ -98,11 +100,23 @@
                           "what"   : "Graduate Research Assistant in Laurent Itti's iLab",
                           "points" : 
                             [
-                              "Currently researching biologically inspired methods for monocular figure/ground segmentation.",
-                              "Implemented NRT, a C++ modular programming framework for image processing and robotics.",
+                              "Currently working on vision and point cloud perception systems for the DARPA Humanoid Robotics competition.",
+                              "Implemented NRT, a C++ modular programming framework for distributed image processing and robotics.",
                               "Implemented tracking and object recognition systems for DARPA's Neovision2 project.",
                               "Implemented a distributed attention system for DARPA's Cognitive Technologies Threat Warning System (CT2WS) project.",
-                              "Performed circuit design, assembly, and embedded programming for Beobot2.0, iLab's next generation 16-core robot."
+                              "Performed circuit design, assembly, and embedded programming for Beobot2.0, iLab's next generation 16-core mobile robot."
+                            ]
+                            })}} 
+
+      {{ experienceEntry({"where"  : "NASA / Jet Propulsion Laboratory",
+                          "when"   : "Summer 2012",
+                          "what"   : "Intern in the Computer Vision for Surface Applications Group",
+                          "points" : 
+                            [
+                              "Tuned and optimized a vision based monocular stabilization system for use in a quadrotor.",
+                              "Built an extensible framework for managing JPL's fleet of quadrotors in ROS.",
+                              "Ported a Rapidly Exploring Random Tree path planner for use on the quadrotors.",
+                              "Wrote an efficient Alpha/Beta filter to integrate and smooth quadrotor velocity and IMU data."
                             ]
                             })}} 
 

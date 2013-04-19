@@ -4,8 +4,8 @@ TARGETDIR=/var/www
 
 all: css site cv
 
-cv: site/cv.pdf
-site/cv.pdf: site templates/cv_raw.html pages/printablecv.html
+cv: site/RandolphVoorhiesCV.pdf
+site/RandolphVoorhiesCV.pdf: templates/cv_raw.html pages/printablecv.html
 	@wkhtmltopdf site/printablecv.html site/RandolphVoorhiesCV.pdf #--zoom .8
 
 css: site/css/all.css

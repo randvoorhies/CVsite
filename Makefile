@@ -1,6 +1,6 @@
 TARGETUSERNAME=rand
-TARGETHOST=199.15.117.8
-TARGETDIR=/var/www
+TARGETHOST=r-c-v.com
+TARGETDIR=/srv/www/r-c-v.com
 
 all: css site cv
 

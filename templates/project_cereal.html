@@ -1,0 +1,21 @@
+{% extends 'project.html' %}
+{% block title %}Cereal{% endblock %}
+{% block tagline %}An open-source C++11 serialization library.{% endblock %}
+{% block content %}
+
+<p>
+  <b>cereal</b> takes arbitrary data types and reversibly turns them into
+  different representations, such as compact binary encodings, XML, or JSON.
+  <b>cereal</b> was designed to be fast, light-weight, and easy to extend - it
+  has no external dependencies and can be easily bundled with other code or used
+  standalone.
+</p>
+<p>
+<b>cereal</b> was a collaboration between <a href="https://github.com/AzothAmmo">Shane Grant</a> and myself, and was built to replace the <a href="http://www.boost.org/doc/libs/1_54_0/libs/serialization/doc/index.html">boost.serialization</a> library in <a href="#project_nrt">NRT</a>.
+</p>
+
+<div class="checkitout">Check it out here: <a href="http://uscilab.github.io/cereal/">Github Documentation Page</a></div>
+
+{% endblock %}
+
+{% block screenshot %}<img src="img/cerealboxside.png">{% endblock %}

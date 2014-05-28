@@ -10,9 +10,13 @@ content: pages css cv
 ########################### HTML Template Pages ###########################
 pages: $(SITE_PAGES)
 
-site/%.html: pages/%.html
+site/%.html: pages/%.html 
+	@mkdir -p .deps
+	@python util/template_deps.py $< > .deps/$*.d
 	@echo "Compiling template file $<"
 	@python util/jinjarender.py $<
+
+-include .deps/*.d
 
 ########################### CSS ###########################
 css: site/css/all.css
@@ -24,7 +28,7 @@ site/css/all.css: less/*.less
 cv: site/RandolphVoorhiesCV.pdf
 site/RandolphVoorhiesCV.pdf: site/printablecv.html templates/cv_raw.html site/css/all.css
 	@echo "Converting cv to pdf"
-	@wkhtmltopdf site/printablecv.html site/RandolphVoorhiesCV.pdf
+	@wkhtmltopdf --quiet site/printablecv.html site/RandolphVoorhiesCV.pdf
 
 
 ########################### Phony Targets ###########################

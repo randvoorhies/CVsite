@@ -1,5 +1,4 @@
 import jinja2
-import glob
 import os.path
 import sys
 

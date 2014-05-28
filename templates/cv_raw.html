@@ -29,7 +29,7 @@
   <div class="row"> <div class="span7"><h4>{{pub['title']}}</h4></div> </div>
   {% if 'awards' in pub %} <div class="row"> <div class="span3"><em><b>({{pub['awards']}})</b></em></div> </div> {% endif %}
   <div class="row"> <div class="span7">{{pub['authors']}}</div> </div>
-  <div class="row"> <div class="span7">{{pub['journal']}} {{pub['date']}}</div> </div>
+  <div class="row"> <div class="span7"><i>{{pub['journal']}} {{pub['date']}}</i></div> </div>
   {% if for_web %}
     {% if pub.has_key('pdf') %}
     <div class="row">
@@ -156,7 +156,7 @@
 
        {{ publicationEntry({"authors" : "Rangachar Kasturi*, Dmitry Goldgof, Rajmadhan Ekambaram, Gill Pratt,
                                          Eric Krotkov, Douglas Hackett, Qinfen Zheng, Yang Ran, Rajeev Sharma,
-                                         mark anderson, Mark Alan Peot, Mario Aguilar, Deepak Khosla, Yang Chen,
+                                         Mark Anderson, Mark Alan Peot, Mario Aguilar, Deepak Khosla, Yang Chen,
                                          Kyungnam Kim, Lior Elazary, Randolph Voorhies, Daniel Parks, Laurent
                                          Itti",
                             "title"   : "Performance Evaluation of Neuromorphic-Vision Object Recognition Algorithms",

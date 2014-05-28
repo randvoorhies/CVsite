@@ -30,7 +30,6 @@ site/RandolphVoorhiesCV.pdf: site/printablecv.html templates/cv_raw.html site/cs
 	@echo "Converting cv to pdf"
 	@wkhtmltopdf --quiet site/printablecv.html site/RandolphVoorhiesCV.pdf
 
-
 ########################### Phony Targets ###########################
 .PHONY: clean deploy
 clean:

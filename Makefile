@@ -2,19 +2,37 @@ TARGETUSERNAME=rand
 TARGETHOST=r-c-v.com
 TARGETDIR=/srv/www/r-c-v.com
 
-all: css site cv
+PAGES=$(wildcard pages/*.html)
+SITE_PAGES=$(subst pages/,site/,${PAGES})
 
-cv: site/RandolphVoorhiesCV.pdf
-site/RandolphVoorhiesCV.pdf: templates/cv_raw.html pages/printablecv.html
-	@wkhtmltopdf site/printablecv.html site/RandolphVoorhiesCV.pdf #--zoom .8
+content: pages css cv
 
+########################### HTML Template Pages ###########################
+pages: $(SITE_PAGES)
+
+site/%.html: pages/%.html
+	@echo "Compiling template file $<"
+	@python util/jinjarender.py $<
+
+########################### CSS ###########################
 css: site/css/all.css
 site/css/all.css: less/*.less
+	@echo "Compiling CSS files"
 	mkdir -p site/css && cd less && lessc all.less > ../site/css/all.css
 
-site: templates/*.html pages/*.html
-	@python util/jinjarender.py
+########################### CV ###########################
+cv: site/RandolphVoorhiesCV.pdf
+site/RandolphVoorhiesCV.pdf: site/printablecv.html templates/cv_raw.html site/css/all.css
+	@echo "Converting cv to pdf"
+	@wkhtmltopdf site/printablecv.html site/RandolphVoorhiesCV.pdf
 
-deploy: all
+
+########################### Phony Targets ###########################
+.PHONY: clean deploy
+clean:
+	rm ${SITE_PAGES}
+	rm site/css/*.css
+
+deploy: content
 	@echo "Deploying to ${TARGETHOST}"
 	@rsync -arvuz site/ ${TARGETUSERNAME}@${TARGETHOST}:${TARGETDIR} --exclude '.git'

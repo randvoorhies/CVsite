@@ -56,8 +56,8 @@
       </div>
 
       <br>
-      <blockquote>www.randolphvoorhies.com<br>
-        703 1/2 East Edgeware Road. Los Angeles, Ca. 90026<br>
+      <blockquote>www.r-c-v.com<br>
+        3129 Roberts Ave. Culver City, Ca. 90232<br>
         voorhies@usc.edu<br>
       </blockquote>
 
@@ -78,7 +78,7 @@
 
       <div class="row">
         {{ skillList({"title" : "Programming Languages",
-                      "skills" : ["C++ (11)", "C", "Python", "MATLAB", "Javascript", "Perl", "Spin"]}) }}
+                      "skills" : ["C++ (11)", "C", "Python", "MATLAB", "Javascript", "GLSL", "Perl", "Spin"]}) }}
 
         {{ skillList({"title" : "Software Libraries",
                       "skills" : ["Boost", "ZeroC Ice", "Eigen", "OpenCV", "ROS", "Qt", "Thrust", "Arduino"]}) }}
@@ -90,20 +90,29 @@
 
         {{ skillList({"title" : "Engineering Abilities",
                       "skills" : ["Image Processing", "Robotic Perception &amp; Localization",
-                                  "Distributed Systems", "Circuit Board Design"]}) }}
+                                  "Distributed Systems", "Circuit Board Design", "Mechanical Design"]}) }}
       </div>
 
       <h1>Experience</h1>
+
+      {{ experienceEntry({"where" : "NASA / Jet Propulsion Laboratory",
+                          "when" : "Fall 2013 - Present",
+                          "what" : "Graduate Research Assistant in Larry Matthies' Computer Vision/Robotics Group",
+                          "points" : 
+                            [
+                              "Currently researching the integration of light polarization measurements into 3D reconstruction algorithms."
+                            ]
+                            })}}
 
       {{ experienceEntry({"where"  : "USC Computer Science Department",
                           "when"   : "Fall 2007 - Present",
                           "what"   : "Graduate Research Assistant in Laurent Itti's iLab",
                           "points" : 
                             [
-                              "Currently working on vision and point cloud perception systems for the DARPA Humanoid Robotics competition.",
-                              "Implemented NRT, a C++ modular programming framework for distributed image processing and robotics.",
+                              "Designed and implemented a plane detection algorithm for LiDAR point clouds, as well as a SLAM solution using detected planes.",
+                              "Created NRT, a C++ modular programming framework for distributed image processing and robotics.",
                               "Implemented tracking and object recognition systems for DARPA's Neovision2 project.",
-                              "Implemented a distributed attention system for DARPA's Cognitive Technologies Threat Warning System (CT2WS) project.",
+                              "Created a distributed visual attention and anomaly detection system for DARPA's Cognitive Technologies Threat Warning System (CT2WS) project.",
                               "Performed circuit design, assembly, and embedded programming for Beobot2.0, iLab's next generation 16-core mobile robot."
                             ]
                             })}} 

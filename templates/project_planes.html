@@ -1,0 +1,21 @@
+{% extends 'project.html' %}
+{% block title %}Real-Time LiDAR Plane Detection{% endblock %}
+{% block tagline %}Detecting planes in 3D LiDAR Point Clouds{% endblock %}
+{% block content %}
+
+<p>
+Many sensors used in robotic perception produce 3D <a
+  href="http://en.wikipedia.org/wiki/Point_cloud">point clouds</a>. Stitching
+such point clouds together to produce a consistent 3D representation of the
+world is a computationally expensive process which often can't be done in
+real-time. Our algorithm exploits the geometry of one such sensor (the Velodyne
+LiDAR) to detect planar structures in the environment, and uses these
+structures to efficiently reconstruct the path of the robot.
+</p>
+
+<div class="checkitout">Check it out here: <a href="http://r-c-v.com/papers/2013IROS_GrantVoorhiesItti.pdf">Paper PDF</a></div>
+
+{% endblock %}
+
+{% block screenshot %}<img src="img/planes.png">{% endblock %}
+

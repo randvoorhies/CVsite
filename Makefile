@@ -1,6 +1,6 @@
-TARGETUSERNAME=rand
-TARGETHOST=r-c-v.com
-TARGETDIR=/srv/www/r-c-v.com
+TARGETUSERNAME=${WEBSITE_LOGIN}
+TARGETHOST=${WEBSITE_URL}
+TARGETDIR=/srv/www/${WEBSITE_URL}
 
 PAGES=$(wildcard pages/*.html)
 SITE_PAGES=$(subst pages/,site/,${PAGES})

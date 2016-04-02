@@ -28,7 +28,7 @@ site/css/all.css: less/*.less
 cv: site/RandolphVoorhiesCV.pdf
 site/RandolphVoorhiesCV.pdf: site/printablecv.html templates/cv_raw.html site/css/all.css
 	@echo "Converting cv to pdf"
-	@wkhtmltopdf --quiet site/printablecv.html site/RandolphVoorhiesCV.pdf
+	@xvfb-run wkhtmltopdf --quiet site/printablecv.html site/RandolphVoorhiesCV.pdf
 
 ########################### Phony Targets ###########################
 .PHONY: clean deploy

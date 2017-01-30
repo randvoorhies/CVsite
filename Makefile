@@ -38,4 +38,4 @@ clean:
 
 deploy: content
 	@echo "Deploying to ${TARGETHOST}"
-	@rsync -arvuz site/ ${TARGETUSERNAME}@${TARGETHOST}:${TARGETDIR} --exclude '.git'
+	@rsync -arvuz site/ ${TARGETHOST}:${TARGETDIR} --exclude '.git'
